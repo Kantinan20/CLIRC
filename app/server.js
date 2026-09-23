@@ -9,6 +9,10 @@ const BUCKET = process.env.REPORT_BUCKET || "clirc-demo-report-uploads";
 
 // POST /reports — generates a report and uploads it to S3
 app.post("/reports", async (req, res) => {
+  if (!req.body || typeof req.body !== "object") {
+    return res.status(400).json({ error: "invalid_body" });
+  }
+
   const reportId = `report-${Date.now()}.json`;
   const body = JSON.stringify(req.body ?? {});
 
