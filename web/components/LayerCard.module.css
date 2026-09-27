@@ -1,0 +1,152 @@
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid transparent;
+  border-radius: 8px;
+  padding: 16px;
+  position: relative;
+  transition: border-left-color 0.2s ease;
+}
+
+.cardRunning {
+  border-left-color: rgba(45, 212, 191, 0.5);
+}
+
+.cardDone {
+  border-left-color: var(--accent);
+}
+
+.cardError {
+  border-left-color: var(--amber);
+}
+
+/* Header row */
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.layerTitle {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.layerSub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+
+/* Status pill */
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 99px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pillQueued {
+  background: rgba(139, 148, 158, 0.15);
+  color: var(--text-muted);
+}
+
+.pillRunning {
+  background: rgba(45, 212, 191, 0.15);
+  color: var(--accent);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+.pillDone {
+  background: rgba(45, 212, 191, 0.15);
+  color: var(--accent);
+}
+
+.pillError {
+  background: rgba(217, 119, 6, 0.15);
+  color: var(--amber);
+}
+
+/* Done-state content */
+.finding {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.evidenceRef {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--bg);
+  padding: 4px 8px;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.relevanceBadge {
+  display: inline-block;
+  border-radius: 99px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--bg);
+}
+
+.relevanceHigh {
+  background: var(--accent);
+}
+
+.relevanceMedium {
+  background: var(--amber);
+}
+
+.relevanceLow {
+  background: var(--text-muted);
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.notes {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Error state */
+.errorMsg {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--amber);
+}

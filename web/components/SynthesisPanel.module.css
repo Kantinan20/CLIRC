@@ -1,0 +1,207 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Partial notice */
+.partialNotice {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--amber);
+  border-radius: 6px;
+  background: rgba(217, 119, 6, 0.08);
+  color: var(--amber);
+  font-size: 0.88rem;
+}
+
+/* Timeline table */
+.timelineTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  background: var(--surface);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.timelineTable thead tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.timelineTable th {
+  text-align: left;
+  padding: 10px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.timelineTable td {
+  padding: 9px 12px;
+  vertical-align: top;
+}
+
+.timelineTable tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.timeCell {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  white-space: nowrap;
+  color: var(--text-muted);
+}
+
+.layerCell {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.eventCell {
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Root cause card */
+.rootCauseCard {
+  border-left: 4px solid var(--accent);
+  background: var(--surface);
+  border-radius: 0 6px 6px 0;
+  padding: 16px;
+}
+
+.cardLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.confidenceBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--red);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.confidenceTrack {
+  width: 100%;
+  height: 6px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.confidenceBar {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+.confidenceBarRed {
+  background: var(--red);
+}
+
+.confidenceBarAmber {
+  background: var(--amber);
+}
+
+.cardSummary {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.cardReasoning {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.citation {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--bg);
+  padding: 6px 10px;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+/* Red herring card */
+.redHerringCard {
+  border-left: 4px solid var(--amber);
+  background: rgba(22, 27, 34, 0.6);
+  border-radius: 0 6px 6px 0;
+  padding: 16px;
+  opacity: 0.8;
+}
+
+.redHerringLabel {
+  color: var(--amber);
+}
+
+/* Fix block */
+.fixBlock {
+  background: var(--surface);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.fixLabel {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.fixLabelTitle {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.fixLabelSub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.fixDescription {
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  line-height: 1.5;
+}
+
+.fixCode {
+  display: block;
+  padding: 12px 14px;
+  background: var(--bg);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: pre;
+  color: var(--text-muted);
+}

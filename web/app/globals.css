@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:         #0D1117;
+  --surface:    #161B22;
+  --border:     #30363D;
+  --text:       #E6EDF3;
+  --text-muted: #8B949E;
+  --accent:     #2DD4BF;   /* teal */
+  --amber:      #D97706;   /* muted amber */
+  --red:        #F85149;   /* ONLY for root-cause confidence bar */
+  --font-sans:  "IBM Plex Sans", sans-serif;
+  --font-mono:  "IBM Plex Mono", monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
