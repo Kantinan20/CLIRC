@@ -1,0 +1,139 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 3rem 1.5rem 2rem;
+  max-width: 760px;
+  margin: 0 auto;
+  gap: 1.5rem;
+}
+
+.header {
+  font-family: var(--font-mono);
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.tagline {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.description {
+  max-width: 600px;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.scenarioGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 540px) {
+  .scenarioGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.25rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  outline: none;
+}
+
+.card:hover {
+  border-color: #4a5568;
+}
+
+.card:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(45, 212, 191, 0.25);
+}
+
+.cardSelected {
+  border-color: var(--accent);
+  border-left: 3px solid var(--accent);
+  background: #1a2530;
+}
+
+.cardSelected:hover {
+  border-color: var(--accent);
+}
+
+.cardTitle {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.cardBlurb {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0.75rem;
+  width: 100%;
+}
+
+.button {
+  background: var(--accent);
+  color: #0D1117;
+  border: none;
+  border-radius: 6px;
+  padding: 0.625rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.button:hover {
+  opacity: 0.88;
+}
+
+.buttonDisabled {
+  background: var(--surface);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.625rem 1.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+
+.footer {
+  margin-top: auto;
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  text-align: center;
+  padding-top: 1rem;
+}

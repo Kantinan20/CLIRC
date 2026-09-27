@@ -1,0 +1,114 @@
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+.backLink {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: color 0.15s ease;
+}
+
+.backLink:hover {
+  color: var(--text);
+}
+
+.scenarioHeader {
+  margin-bottom: 28px;
+}
+
+.scenarioTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.scenarioBlurb {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* 2×2 layer grid */
+.layerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .layerGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Synthesis section */
+.synthesisSection {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.synthesisSectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+/* Loading state */
+.synthesisLoading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+.loadingPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 99px;
+  padding: 3px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  background: rgba(45, 212, 191, 0.15);
+  color: var(--accent);
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+/* Setup / API key banner */
+.setupBanner {
+  padding: 16px 18px;
+  border: 1px solid var(--amber);
+  border-radius: 6px;
+  background: rgba(217, 119, 6, 0.08);
+  color: var(--amber);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.setupBanner strong {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+/* Generic error */
+.errorMsg {
+  font-size: 0.88rem;
+  color: var(--amber);
+  margin-top: 8px;
+}
